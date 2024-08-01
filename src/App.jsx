@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage';
 import BusinessTypes from './pages/BusinessTypes';
 import Dashboard from './components/Dashboard';
 import PartnershipDeedDrafting from './components/PartnershipDeedDrafting';
+import Chatbot from './components/Chatbot';
 
 const App = () => {
   const [sections, setSections] = useState([
@@ -58,6 +59,7 @@ const App = () => {
         <Route path="/business-types" element={<BusinessTypes />} />
         <Route path="/dashboard" element={<Dashboard sections={sections} toggleTaskCompletion={toggleTaskCompletion} />} />
         <Route path="/partnership-deed-drafting" element={<PartnershipDeedDrafting onComplete={() => toggleTaskCompletion(0, 1)} />} />
+        <Route path="/ai" element={<Chatbot />}></Route>
       </Routes>
     </Router>
   );
