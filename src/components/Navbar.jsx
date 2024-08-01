@@ -3,6 +3,8 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { FaXmark, FaBars } from "react-icons/fa6";
+import Dashboard from './Dashboard';
+import BusinessTypes from '../pages/BusinessTypes';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,6 +67,9 @@ const Navbar = () => {
                         </RouterLink>
                         <RouterLink to="/business-types" className='bg-brandPrimary text-white py-2 px-4 transition-all duration-300 rounded hover:bg-neutralDGrey'>
                             Business Types
+                        </RouterLink>
+                        <RouterLink to="/ai" className='hidden lg:flex items-center text-brandPrimary hover:text-grey900'>
+                            AI Chat
                         </RouterLink>
                     </div>
 
